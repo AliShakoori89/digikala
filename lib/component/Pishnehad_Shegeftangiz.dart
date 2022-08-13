@@ -13,8 +13,7 @@ class PishnehadShegeftAngiz extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Padding(
@@ -48,16 +47,16 @@ class PishnehadShegeftAngiz extends StatelessWidget {
                 left: 8,
                 child: (topstore.darsadtakhfif == true)
                     ? Padding(
-                        padding: EdgeInsets.only(left: 33.0),
-                        child: CustomPaint(
-                          painter: Curvepainter(),
-                          child: Center(
-                              child: Text(
+                    padding: EdgeInsets.only(left: 33.0),
+                    child: CustomPaint(
+                      painter: Curvepainter(),
+                      child: Center(
+                          child: Text(
                             topstore.mablaghtakhfif.toPersianDigit().seRagham(),
                             style:
-                                TextStyle(color: Colors.grey, fontSize: 12.0),
+                            TextStyle(color: Colors.grey, fontSize: 12.0),
                           )),
-                        ))
+                    ))
                     : Container(),
               ),
               Positioned(
@@ -85,7 +84,7 @@ class PishnehadShegeftAngiz extends StatelessWidget {
               ),
               Positioned(
                   top: 170,
-                  left: 100,
+                  left: MediaQuery.of(context).size.width / 3.5,
                   child: Container(
                       height: 20,
                       width: 20,
@@ -110,7 +109,7 @@ class PishnehadShegeftAngiz extends StatelessWidget {
           ),
         ),
       ],
-    ));
+    );
   }
 }
 
