@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:persian_number_utility/persian_number_utility.dart';
 
 
-class SuperMarketShegeftangiz extends StatelessWidget {
+class SuperMarketShegeftAngiz extends StatelessWidget {
 
-  final MiddleStore middlestore;
+  final MiddleStore middleStore;
   final Function press;
 
-  const SuperMarketShegeftangiz({Key key, this.middlestore, this.press}) : super(key: key);
+  const SuperMarketShegeftAngiz({Key key, this.middleStore, this.press}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class SuperMarketShegeftangiz extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(20.0),
                                   image: DecorationImage(
                                     alignment: Alignment.topCenter,
-                                    image: AssetImage(middlestore.image),
+                                    image: AssetImage(middleStore.image),
                                   )
                               ),
                             ),
@@ -59,6 +59,7 @@ class SuperMarketShegeftangiz extends StatelessWidget {
                                         hoverColor: Colors.green,
                                         padding:EdgeInsets.only(),
                                         icon: Icon(Icons.add, color: Colors.red,),
+                                        onPressed: () {  },
                                       )
                                   )
                               ),
@@ -71,16 +72,16 @@ class SuperMarketShegeftangiz extends StatelessWidget {
                   Expanded(
                     child: Align(
                       alignment: Alignment.topCenter,
-                      child: Text(middlestore.title, textDirection: TextDirection.rtl),
+                      child: Text(middleStore.title, textDirection: TextDirection.rtl),
                     ),
                   ),
-                  (middlestore.ersalsari == true) ?
+                  (middleStore.ersalsari == true) ?
                   Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text('${middlestore.ersalsarisupermarketi}'),
-                        Image.asset('${middlestore.imageersalsupermarketi}',height: 25.0,width: 25.0,),
+                        Text('${middleStore.ersalsarisupermarketi}'),
+                        Image.asset('${middleStore.imageersalsupermarketi}',height: 25.0,width: 25.0,),
                       ],
                     ),
                   ): SizedBox(height: 24.0,),
@@ -98,16 +99,16 @@ class SuperMarketShegeftangiz extends StatelessWidget {
                                   Row(
                                     children: [
                                       Text('تومان'),
-                                      Text(middlestore.price.toPersianDigit().seRagham(),
+                                      Text(middleStore.price.toPersianDigit().seRagham(),
                                         style: TextStyle(fontSize: 15.0),),
                                     ],
                                   ),
-                                  (middlestore.darsadtakhfif == true) ?
+                                  (middleStore.darsadtakhfif == true) ?
                                   Padding(padding: EdgeInsets.only(left: 33.0),
                                       child: CustomPaint(
                                         painter: Curvepainter(),
                                         child: Center(
-                                            child: Text(middlestore.mablaghtakhfif.toPersianDigit().seRagham(),
+                                            child: Text(middleStore.mablaghtakhfif.toPersianDigit().seRagham(),
                                               style: TextStyle(color: Colors.grey, fontSize: 15.0 ),)
                                         ),
                                       )
@@ -117,7 +118,7 @@ class SuperMarketShegeftangiz extends StatelessWidget {
                             ],
                           ),
                         ),
-                        (middlestore.darsadtakhfif == true) ?
+                        (middleStore.darsadtakhfif == true) ?
                         Container(
                             width: 35.0,
                             height: 17.0,
@@ -128,7 +129,7 @@ class SuperMarketShegeftangiz extends StatelessWidget {
                             ),
                             child: Align(
                                 alignment: Alignment.center,
-                                child: Text(middlestore.meghdardarsadtakhfif,style: TextStyle(color: Colors.white),)
+                                child: Text(middleStore.meghdardarsadtakhfif,style: TextStyle(color: Colors.white),)
                             )
                         ): Container()
                       ],

@@ -1,12 +1,12 @@
-import 'package:digikala/models/TopStories.dart';
+import 'package:digikala/component/Supermarket_Shegeftangiz.dart';
+import 'package:digikala/models/MiddelStore.dart';
 import 'package:flutter/material.dart';
-import 'Pishnehad_Shegeftangiz.dart';
 
-class ShegeftAngizCategorie extends StatelessWidget {
+class SuperMarketCategorie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red[700],
+      color: Colors.green[700],
       height: 320,
       child: Stack(
         children: [
@@ -24,7 +24,7 @@ class ShegeftAngizCategorie extends StatelessWidget {
                               child: Container(
                                 width: 130,
                                 height: 250,
-                                child: Image.asset('Assets/images2/pishnehad_shegeftangiz.png',fit: BoxFit.fill,),
+                                child: Image.asset('Assets/images/supermarket_shegeft_angiz.png',fit: BoxFit.fill,),
                               ),),
                           ),
                           InkWell(
@@ -47,11 +47,10 @@ class ShegeftAngizCategorie extends StatelessWidget {
                 SliverList(
                   delegate: SliverChildBuilderDelegate(
                         (BuildContext context, int index) {
-                          print(topstories.length);
-                      return PishnehadShegeftAngiz(
-                          topstore: topstories[index]);
+                      return SuperMarketShegeftAngiz(
+                          middleStore: middlestores[index]);
                     },
-                    childCount: topstories.length,),
+                    childCount: middlestores.length,),
                 ),
               ]
           )

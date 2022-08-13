@@ -12,7 +12,7 @@ class IconCategorie extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemCount: iconheaders.length,
           itemBuilder: (context,index) => BuildCategory(
-            iconheader: iconheaders[index],
+            iconHeader: iconheaders[index],
           ),
         )
     );
@@ -20,10 +20,10 @@ class IconCategorie extends StatelessWidget {
 }
 
 class BuildCategory extends StatelessWidget{
-  final IconHeader iconheader;
+  final IconHeader iconHeader;
   final Function press;
 
-  const BuildCategory({Key key, this.iconheader, this.press}) : super(key: key);
+  const BuildCategory({Key key, this.iconHeader, this.press}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +35,9 @@ class BuildCategory extends StatelessWidget{
               crossAxisAlignment: CrossAxisAlignment.center,
               children:<Widget>[
                 CircleAvatar(
-                    backgroundColor: iconheader.color,
-                    child: iconheader.icon),
-                Text('${iconheader.title}',style: TextStyle(fontSize: 11.0),)
+                    backgroundColor: iconHeader.color,
+                    child: iconHeader.icon),
+                Text('${iconHeader.title}',style: TextStyle(fontSize: 11.0, fontWeight: FontWeight.w600),)
               ],
             )
         )

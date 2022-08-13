@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'package:digikala/Animation/animation.dart';
+import 'package:digikala/component/BottomNavigat.dart';
 import 'package:flutter/material.dart';
 import 'package:loading/indicator/ball_pulse_indicator.dart';
 import 'package:loading/loading.dart';
 import '../Icon/app_icons.dart';
-import '../homepage.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Navigator.pushReplacement(
         context, MaterialPageRoute(
         builder: ( context ) =>
-            HomePage()
+        BottomNav()
       )
     );
   }

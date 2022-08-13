@@ -1,16 +1,13 @@
-import 'package:digikala/UIwidget/Supermarket_Shegeftangiz.dart';
-import 'package:digikala/models/MiddelStore.dart';
 import 'package:digikala/models/TopStories.dart';
 import 'package:flutter/material.dart';
-
 import 'Pishnehad_Shegeftangiz.dart';
 
-class SuperMarketCategorie extends StatelessWidget {
+class ShegeftAngizCategorie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green[700],
-      height: 320,
+      color: Colors.red[700],
+      height: MediaQuery.of(context).size.height / 3.5,
       child: Stack(
         children: [
           CustomScrollView(
@@ -25,9 +22,9 @@ class SuperMarketCategorie extends StatelessWidget {
                           Expanded(
                             child: Padding(padding: EdgeInsets.only(top: 20.0 ,right: 20.0),
                               child: Container(
-                                width: 130,
+                                width: MediaQuery.of(context).size.width / 4,
                                 height: 250,
-                                child: Image.asset('Assets/images/supermarket_shegeft_angiz.png',fit: BoxFit.fill,),
+                                child: Image.asset('Assets/images2/pishnehad_shegeftangiz.png',fit: BoxFit.fill,),
                               ),),
                           ),
                           InkWell(
@@ -50,10 +47,11 @@ class SuperMarketCategorie extends StatelessWidget {
                 SliverList(
                   delegate: SliverChildBuilderDelegate(
                         (BuildContext context, int index) {
-                      return SuperMarketShegeftangiz(
-                          middlestore: middlestores[index]);
+                          print(topstories.length);
+                      return PishnehadShegeftAngiz(
+                          topstore: topstories[index]);
                     },
-                    childCount: middlestores.length,),
+                    childCount: topstories.length,),
                 ),
               ]
           )

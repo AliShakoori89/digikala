@@ -1,9 +1,7 @@
 import 'package:digikala/Icon/address_icons.dart';
 import 'package:digikala/Icon/comment.dart';
-import 'package:digikala/UIwidget/BottomNavigat.dart';
-import 'package:digikala/UIwidget/PeygiriSefaresh.dart';
+import 'package:digikala/component/PeygiriSefaresh.dart';
 import 'package:persian_number_utility/persian_number_utility.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -13,11 +11,7 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      color: Colors.grey,
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        bottomNavigationBar: BottomNav(),
+    return Scaffold(
         body: SingleChildScrollView(
           child: Container(
             color: Colors.white,
@@ -227,23 +221,22 @@ class ProfilePage extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.all(10.0),
                   child: Container(
-                    width: 700.0,
-                    height: 150.0,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(20.0),
-                      image: DecorationImage(
-                        image: AssetImage("Assets/images5/2.jpg"),
-                        fit: BoxFit.fill
-                        )
+                      width: 700.0,
+                      height: 150.0,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.white),
+                          borderRadius: BorderRadius.circular(20.0),
+                          image: DecorationImage(
+                              image: AssetImage("Assets/images5/2.jpg"),
+                              fit: BoxFit.fill
+                          )
                       )
-                    ),
                   ),
+                ),
               ],
             ),
           ),
         )
-      ),
     );
   }
 }

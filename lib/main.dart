@@ -1,9 +1,14 @@
-import 'package:flutter/cupertino.dart';
+// import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-
 import 'SpalshScreen/splashscreen.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(
+  // DevicePreview(
+  //   enabled: !kReleaseMode,
+  //   builder: (context) =>
+        MyApp(),
+  // ),
+);
 
 class MyApp extends StatelessWidget {
   @override

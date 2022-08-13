@@ -33,7 +33,7 @@ class BuildCategory extends StatelessWidget{
             padding: EdgeInsets.only(left: 10.0, right: 10.0),
             child: Row(
               children: [
-                (AssetImage(ravandSefareshat.image) != AssetImage("Assets/images5/مرجوع شده.jpg"))?
+                (AssetImage(ravandSefareshat.image) != AssetImage("Assets/images5/marju_shode.jpg"))?
                 Container(
                   height: 100,
                   margin: const EdgeInsets.symmetric(vertical: 10),

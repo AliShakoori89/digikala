@@ -8,27 +8,27 @@ class RavandSefareshat {
 List<RavandSefareshat> orders = [
   RavandSefareshat(
     id: 1,
-    image: "Assets/images5/در انتظار پرداخت.png",
+    image: "Assets/images5/dar_entezar_pardakht.png",
     title: 'در انتظار پرداخت'
   ),
   RavandSefareshat(
     id: 2,
-    image: "Assets/images5/در حال پردازش.png",
+    image: "Assets/images5/dar_hal_pardazesh.png",
     title: 'در حال پردازش'
   ),
   RavandSefareshat(
     id: 3,
-    image: "Assets/images5/تحویل شده.png",
+    image: "Assets/images5/tahvil_shode.png",
     title: 'تحویل شده'
   ),
   RavandSefareshat(
     id: 4,
-    image: "Assets/images5/لغو شده.jpg",
+    image: "Assets/images5/laghv_shode.jpg",
     title: 'لغو شده'
   ),
   RavandSefareshat(
     id: 5,
-    image: "Assets/images5/مرجوع شده.jpg",
+    image: "Assets/images5/marju_shode.jpg",
     title: 'مرجوع شد'
   ),
 
